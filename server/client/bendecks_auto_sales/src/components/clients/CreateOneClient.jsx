@@ -6,41 +6,12 @@ import { create_one_client } from "../../GraphQL/mutations/clientMutations";
 const CreateOneClient = () => {
 	const [info, setInfo] = useState({});
 	const navigate = useNavigate();
-	const [createOneClient] = useMutation(
-		create_one_client
-		// 	 {
-		// 	update(cache, { data: { addNewItem } }) {
-		// 		cache.modify({
-		// 			fields: {
-		// 				allItems(existingItems = []) {
-		// 					const newItemRef = cache.writeFragment({
-		// 						data: addNewItem,
-		// 						fragment: gql`
-		// 							fragment NewItem on Item {
-		// 								id
-		// 								clientName
-		// 								clientLastName
-		// 								cellPhone
-		// 								createdAt
-		// 								updatedAt
-		// 							}
-		// 						`,
-		// 					});
-		// 					let newInfo = [...existingItems, newItemRef];
-		// 					console.log("new item", newItemRef);
-		// 					console.log("the cache was updated", newInfo);
-		// 					return newInfo;
-		// 				},
-		// 			},
-		// 		});
-		// 	},
-		// }
-	);
+	const [createOneClient] = useMutation(create_one_client);
 	const [sections, setSections] = useState([{ number: "" }]);
 	const [validations, setValidations] = useState(false);
 
 	// Function to handle input changes and update state accordingly
-	const infoToBeSubmitted = e => {
+	const infoToBeSubmitted = (e) => {
 		setInfo({
 			...info,
 			[e.target.name]: e.target.value,
@@ -48,7 +19,7 @@ const CreateOneClient = () => {
 	};
 
 	// Function to handle form submission
-	const submit = async e => {
+	const submit = async (e) => {
 		e.preventDefault(); // Prevent default form submission behavior
 
 		await createOneClient({
@@ -58,12 +29,12 @@ const CreateOneClient = () => {
 				cellPhones: sections,
 			},
 		})
-			.then(async res => {
+			.then(async (res) => {
 				let id = res.data.createOneClient.id;
 				await navigate(`/${id}`);
 				// await console.log("here is the response", res.data.createOneClient);
 			})
-			.catch(error => {
+			.catch((error) => {
 				setValidations(true);
 			});
 	};
@@ -99,11 +70,11 @@ const CreateOneClient = () => {
 		setSections(updatedSections);
 
 		// Assuming you want to update the info object after formatting the phone number
-		const updatedCellPhones = updatedSections.map(section => section.number);
+		const updatedCellPhones = updatedSections.map((section) => section.number);
 		setInfo({ ...info, cellPhones: updatedCellPhones });
 	};
 
-	const deleteSection = index => {
+	const deleteSection = (index) => {
 		const filteredSections = sections.filter((_, secIndex) => secIndex !== index);
 		setSections(filteredSections);
 	};
@@ -118,7 +89,7 @@ const CreateOneClient = () => {
 						<input
 							type="text"
 							name="clientName"
-							onChange={e => {
+							onChange={(e) => {
 								infoToBeSubmitted(e);
 								setValidations(false);
 							}}
@@ -132,7 +103,7 @@ const CreateOneClient = () => {
 					<div>
 						<input
 							name="clientLastName"
-							onChange={e => {
+							onChange={(e) => {
 								infoToBeSubmitted(e);
 								setValidations(false);
 							}}
@@ -149,7 +120,7 @@ const CreateOneClient = () => {
 								<input
 									type="text"
 									name="number"
-									onChange={e => {
+									onChange={(e) => {
 										handleInputChange(e, index);
 										setValidations(false);
 									}}
