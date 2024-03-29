@@ -154,3 +154,11 @@ startServer(); //calling  the function
 // };
 
 // startServer();
+
+// Clear the cache for a specific module
+// delete require.cache[require.resolve("./path/to/module")];
+
+// // Clear the entire module cache
+// Object.keys(require.cache).forEach((key) => {
+// 	delete require.cache[key];
+// });
