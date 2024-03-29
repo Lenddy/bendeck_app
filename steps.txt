@@ -1,0 +1,134 @@
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+most likely you will deploy the back end to render 
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+make the table swipple so some info can be off screen and the users can swipe left or right to see the info 
+
+
+
+
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+red!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+make a new database after 
+
+
+Make a car payments(loans) management system for bryan
+
+it will need a list of all the clients and their info 
+    view one , delete , update and creates
+
+
+you may want to add a deal info for a client
+
+the latness paymnet is 80 dollars per late  paymnet  and 10 dollars every day after 
+
+
+
+
+cars and all their info 
+
+you will need to add (store):
+
+clients info:
+    full name:
+    address:
+    when was the car taken out:
+    day of payments:
+    car type:
+
+
+cars info:
+    get the amount of all the cars and specific types of car for every brand
+
+    name of the car:
+    type:
+    model:
+    how many cars are left:
+    etc:
+
+
+deals info:\
+
+
+
+
+
+
+that there is a limit of 45 days or the car will need to be return
+
+
+
+
+
+
+what i want to do 
+
+
+
+go over every deal(red done)
+
+get every payment  (red done)
+
+
+check if a payment is late (red done)
+
+
+if a payment is late add a 80 dallar fee on the first day per   individual payment  (red done)
+
+
+
+
+
+fix the has to pay 
+
+
+
+
+make sure that there is also functionality   that works when there is only one day late but the is late   field is == true
+
+
+
+make sure that the fee is being updated accurately
+
+
+
+make sure that the update happens    go to the if where the bulk is send to the data base 
+
+
+
+
+
+then every day after that 10 dollar should be add to the fee until 45 day if there is no payment for every individual payment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
